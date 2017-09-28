@@ -1,10 +1,30 @@
 <html>
 
 <head>
+    <script>
+        function change() {
 
+            var myNewTitle = document.getElementById('myTextField').value;
+            if (myNewTitle.length == 0) {
+                alert('Write Some real Text please.');
+                return;
+            }
+
+            var title = document.getElementById('title');
+            title.innerHTML = myNewTitle;
+
+        }
+    </script>
 </head>
 
 <body>
-    <h1>hello!</h1>
+    <h1 id="title">Javascript example no.2</h1>
+    <input type="text" id="myTextField" />
+    <input type="submit" id="byBtn" value="Change" onclick="change()" />
+    <script>
+        console.log("foo")
+    </script>
 
 </body>
+
+</html>
